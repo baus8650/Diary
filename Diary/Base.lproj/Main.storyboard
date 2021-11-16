@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dRE-v4-gyy">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -107,14 +107,15 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="7DO-jh-8UL">
                                 <rect key="frame" x="-44" y="0.0" width="502" height="896"/>
                             </imageView>
-                            <textField opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1um-fI-j5P">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1um-fI-j5P">
                                 <rect key="frame" x="48" y="183" width="318" height="38"/>
                                 <color key="backgroundColor" name="Color"/>
+                                <color key="tintColor" name="textColor"/>
                                 <color key="textColor" name="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LqK-Tb-G54">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LqK-Tb-G54">
                                 <rect key="frame" x="48" y="123" width="318" height="39.5"/>
                                 <color key="backgroundColor" name="Color"/>
                                 <color key="textColor" name="textColor"/>
@@ -215,11 +216,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ihz-jH-dSf">
                         <barButtonItem key="leftBarButtonItem" title="Log Out" id="e9q-Ey-5G5">
+                            <color key="tintColor" name="textColor"/>
                             <connections>
                                 <action selector="logOutPressed:" destination="gdq-RL-Yav" id="E4x-f5-SOl"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gb1-xL-PZ0">
+                            <color key="tintColor" name="textColor"/>
                             <connections>
                                 <action selector="addButtonPressed:" destination="gdq-RL-Yav" id="oYE-Lq-r2w"/>
                                 <segue destination="CVt-mM-LH1" kind="presentation" identifier="NewEntry" id="dF1-3N-NTy"/>
@@ -286,7 +289,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fGy-Om-heH">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="09F-5m-bVv">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="09F-5m-bVv">
+                            <color key="tintColor" name="textColor"/>
                             <connections>
                                 <segue destination="Hfw-Dh-QeE" kind="presentation" identifier="EntryToEdit" id="oEV-I7-kbl"/>
                             </connections>
@@ -599,7 +603,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7l9-IP-qIR"/>
+        <segue reference="kCA-1m-1ex"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="textColor"/>
     <resources>

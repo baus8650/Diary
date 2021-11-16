@@ -60,6 +60,10 @@ class DiaryListViewController: UIViewController {
         Auth.auth().removeStateDidChangeListener(handle)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let entryViewController = segue.destination as? EntryViewController,
               let index = tableView.indexPathForSelectedRow?.row
